@@ -1,1 +1,240 @@
-/* font-family: 'Roboto', sans-serif; */
+/* global */
+* {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background: url("../img/promo-bgc.jpg") top center no-repeat;
+    color: #000;
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+img {
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    width: 1110px;
+}
+/*header*/
+.header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        img {
+            display: block;
+            padding-top: 30px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        height: 84px;
+        flex: 0 0 33%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+}
+
+/*promo*/
+.promo {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    &__title {
+        margin: 0;
+        padding-bottom: 315px;
+        font-weight: normal;
+        font-size: 85px;
+        line-height: 93px;
+        text-align: center;
+    }
+    &__link {
+        position: absolute;
+        width: 79px;
+        height: 80px;
+        background: url("../img/promo__arrow.svg");
+        bottom: 10px;
+        left: calc(50% - 79px/2);
+    }
+    &__cookes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: 30px;
+        width: 392px;
+        padding: 11px 10px 11px 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 78px;
+    }
+    &__text {
+        margin: 0;
+        color: #fff;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__btn {
+        padding: 0px 22px;
+        border: 0;
+        outline: 0;
+        color: #000;
+        background-color: #F5AFB9;
+        font-size: 13px;
+        line-height: 35px;
+        text-transform: uppercase;
+        border-radius: 17.5px;
+    }
+}
+
+/*products*/
+.products {
+    background-color: #ED7B49;
+    &__container {
+        display: flex;
+        gap: 126px;
+        margin: 0 auto;
+        padding-top: 76px;
+        padding-bottom: 100px;
+        width: 900px;
+        align-items: center;
+    }
+    &__img {
+        background: url("../img/products-gluten.svg") no-repeat;
+        width: 241px;
+        height: 241px;
+    }
+    &__title {
+        margin: 0;
+        padding-bottom: 12px;
+        font-size: 85px;
+        line-height: 93px;
+        font-weight: 700;
+    }
+    &__text {
+        margin: 0;
+        width: 491px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__goods {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-bottom: 200px;
+        }
+    }
+}
+.products-goods {
+    &__good {
+        position: relative;
+        width: 360px;
+    }
+    &__img {
+        width: 360px;
+        height: 526px;
+    }
+    &__title {
+        position: absolute;
+        bottom: 100px;
+        margin: 0;
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 700;
+    }
+    &__price {
+        display: block;
+        margin: 0;
+        margin-top: -30px;
+        padding-bottom: 23px;
+        font-size: 21px;
+        line-height: 31px;
+        font-weight: 700;
+    }
+    &__button {
+        padding: 10px 47px;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 36px;
+        &.button-green {
+            background-color: #72A080;
+        }
+        &.button-brown {
+            background-color: #A95D50;
+        }
+        &.button-purple {
+            background-color: #ABAFD6;
+        }
+    }
+}
+
+/*way*/
+.way {
+    background-color: #ED7B49;
+    .container {
+        position: relative;
+        margin-top: -5px;
+        padding-top: 200px;
+        padding-bottom: 400px;
+        &::before {
+            position: absolute;
+            content: "";
+            background: url("../img/way-img.png") no-repeat;
+            width: 844px;
+            height: 775px;
+            top: -31px;
+            right: -85px;
+        }
+    }
+    &__promo {
+        width: 360px;
+    }
+    &__title {
+        margin: 0;
+        padding-bottom: 19px;
+        font-weight: 700;
+        font-size: 85px;
+        line-height: 93px;
+    }
+    &__text {
+        margin: 0;
+        padding-bottom: 47px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__btn {
+        border: 0;
+        outline: none;
+        background-color: #000;
+        color: #fff;
+        padding: 5px 74px;
+        border-radius: 32px;
+    }
+}
+
+/*nut*/
