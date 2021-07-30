@@ -645,3 +645,117 @@ img {
         font-weight: 700;
     }
 }
+
+/*footer*/
+.footer {
+    position: relative;
+    margin-top: -5px;
+    background-color: #BE5A4B;
+    &::after {
+        position: absolute;
+        content: "";
+        background: url("../img/footer-pattern.png") bottom left no-repeat;
+        width: 1440px;
+        height: 120px;
+        bottom: 0;
+        left: 0;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 135px;
+        padding-bottom: 110px;
+        img {
+            display: block;
+            flex: 0 1 100%;
+        }
+    }
+    &__container {
+        padding-top: 116px;
+    }
+}
+.tools {
+    flex: 0 0 50%;
+    &__title {
+        margin: 0;
+        padding-bottom: 45px;
+        font-size: 85px;
+        line-height: 93px;
+        font-weight: 700;
+    }
+    &__container {
+        width: 445px;
+        &:first-child {
+            margin-bottom: 110px;
+            border-bottom: 1px solid #000;
+        }
+        &:nth-child(2) {
+            margin-bottom: 70px;
+        }
+        input {
+            width: 100%;
+            padding-bottom: 7px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        input::placeholder {
+            font-size: 12px;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            line-height: 18px;
+            font-weight: 400;
+            color: #000000;
+        }
+    }
+    &__copyright {
+        margin: 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__follow {
+        margin: 0;
+        padding-bottom: 24px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+    &__social {
+        display: flex;
+        li {
+            padding-right: 18px;
+        }
+    }
+    &__payment {
+        display: flex;
+        padding-bottom: 20px;
+        li {
+            padding-right: 14px;
+        }
+    }
+}
+.nav {
+    flex: 0 0 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__box {
+
+    }
+    &__title {
+        margin: 0;
+        padding-bottom: 21px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+    }
+    &__list {
+        padding-bottom: 60px;
+    }
+    &__link {
+        padding-bottom: 21px;
+        a {
+            margin: 0;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+    }
+}
