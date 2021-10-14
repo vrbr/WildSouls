@@ -5,47 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Wild Souls</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <ul class="header__list header-left">
-                <li class="header__item">
-                    <a href="" class="header__link">Products</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Who we are</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Concept Store</a>
-                </li>
-            </ul>
-            <img src="img/promo-logo.svg" width="121" height="161" alt="Logo">
-            <ul class="header__list header-right">
-                <li class="header__item">
-                    <a href="" class="header__link">Recipes</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Log In</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Cart (0)</a>
-                </li>
-            </ul>
+            <div class="header__wrapper">
+                <img class="header__logo" src="img/promo-logo.svg" width="121" height="161" alt="Logo">
+                <div class="header__toggle">
+                    <span></span>
+                </div>
+                <ul class="header__list">
+                    <li class="header__item item-left">
+                        <a href="" class="header__link">Products</a>
+                    </li>
+                    <li class="header__item item-left">
+                        <a href="" class="header__link">Who we are</a>
+                    </li>
+                    <li class="header__item item-left">
+                        <a href="" class="header__link">Concept Store</a>
+                    </li>
+                    <li class="header__item item-right">
+                        <a href="" class="header__link">Recipes</a>
+                    </li>
+                    <li class="header__item item-right">
+                        <a href="" class="header__link">Log In</a>
+                    </li>
+                    <li class="header__item item-right">
+                        <a href="" class="header__link">Cart (0)</a>
+                    </li>
+                    <li class="header__item item-right">
+                        <a href="" class="header__link">EN</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
         <section class="promo">
-            <h1 class="promo__title">Taste the Wild.<br>Find your Soul</h1>
+            <h1 class="promo__title">Taste the Wild. Find your Soul</h1>
             <a href="" class="promo__link"></a>
             <div class="promo__cookes">
                 <p class="promo__text">Our Website use cookies</p>
                 <button class="promo__btn">Ok</button>
             </div>
         </section>
-        <section class="products">
+        <!-- <section class="products">
             <div class="products__container">
                 <div class="products__img"></div>
                 <div class="products__info">
@@ -75,8 +82,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="way">
+        </section> -->
+        <!-- <section class="way">
             <div class="container">
                 <div class="way__promo">
                     <h2 class="way__title">Our wild way</h2>
@@ -84,8 +91,8 @@
                     <button class="way__btn">Discover more!</button>
                 </div>
             </div>
-        </section>
-        <section class="nut">
+        </section> -->
+        <!-- <section class="nut">
             <div class="container">
                 <div class="nut__promo promo-nut">
                     <h2 class="promo-nut__title">Wild like a<br>Nut??</h2>
@@ -119,8 +126,8 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <section class="soul">
+        </section> -->
+        <!-- <section class="soul">
             <div class="container">
                 <h2 class="soul__title">Words from the soul!</h2>
                 <div class="soul__wrapper">
@@ -138,8 +145,8 @@
                     <div class="soul__button button-next"></div>
                 </div>
             </div>
-        </section>
-        <section class="store">
+        </section> -->
+        <!-- <section class="store">
             <div class="container">
                 <div class="store__promo">
                     <h2 class="store__title">The Concept Store</h2>
@@ -150,8 +157,8 @@
                     <img src="img/store.png" alt="">
                 </div>
             </div>
-        </section>
-        <section class="halva">
+        </section> -->
+        <!-- <section class="halva">
             <div class="container">
                 <div class="halva__promo">
                     <h2 class="halva__title">Wild Halva</h2>
@@ -165,8 +172,8 @@
                     <button class="halva__btn">Discover them now!</button>
                 </div>
             </div>
-        </section>
-        <section class="bite">
+        </section> -->
+        <!-- <section class="bite">
             <div class="container">
                 <div class="bite__promo">
                     <h2 class="bite__title">The Five Treasures</h2>
@@ -177,8 +184,8 @@
                     <img src="img/bite.png" width="746" height="670" alt="">
                 </div>
             </div>
-        </section>
-        <section class="recipes">
+        </section> -->
+        <!-- <section class="recipes">
             <h2 class="recipes__title">Wild Recipes</h2>
             <p class="recipes__text">Take a look at the keyhole of our Wild kitchen! Get ideas on how to<br>turn your own kitchen into a Wild.</p>
             <div class="recipes__container">
@@ -198,9 +205,9 @@
                     <p class="recipes__name">Wild 6 Ingredient<br>Granola</p>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <img src="img/logo-footer.svg" width="145" height="193" alt="Logo">
             <div class="footer__container tools">
@@ -273,6 +280,8 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
+
+    <script src="js/script.js"></script>
 </body>
 </html>
