@@ -252,38 +252,26 @@ img {
 
 /*nut*/
 .nut {
-    margin-top: -5px;
     background-color: #ED7B49;
     .container {
-        margin-left: 0;
-        margin-right: 260px;
         display: flex;
     }
 }
 .promo-nut {
     position: relative;
-    padding: 94px 0px 164px 165px;
+    padding: 94px 250px 164px 165px;
     background-color: #BE5A4B;
     border-radius: 0px 220px 0px 0px;
     margin-right: 110px;
-    flex: 0 0 800px;
     &::after {
         position: absolute;
         content: "";
         background: url("../img/nut.png") no-repeat;
+        background-size: contain;
         width: 350px;
-        height: 433px;
+        height: 529px;
         bottom: 59px;
         right: 17px;
-    }
-    &::before {
-        position: absolute;
-        content: "";
-        background: url("../img/hand.svg") no-repeat;
-        width: 86px;
-        height: 158px;
-        top: 239px;
-        right: 39px;
     }
     &__title {
         margin: 0;
@@ -291,6 +279,7 @@ img {
         font-size: 85px;
         line-height: 93px;
         font-weight: 700;
+        width: 340px;
     }
     &__prewiev {
         margin: 0;
@@ -298,6 +287,9 @@ img {
         font-size: 42px;
         line-height: 50px;
         font-weight: 700;
+        .carry {
+            display: block;
+        }
     }
     &__text {
         margin: 0;
@@ -324,7 +316,6 @@ img {
     }
 }
 .enumeration-nut {
-    flex: 0 0 255px;
     padding-top: 94px;
     &__text {
         margin: 0;
@@ -797,7 +788,47 @@ img {
             line-height: 84px;
         }
     }
+    .promo-nut {
+        margin-right: 50px;
+        &__title {
+            font-size: 74px;
+            line-height: 84px;
+        }
+        &__prewiev {
+            font-size: 38px;
+            line-height: 46px;
+        }
+        &::after {
+            width: 300px;
+            height: 454px;
+            bottom: 142px;
+        }
+    }
 
+}
+@media(max-width: 1120px) {
+    .nut {
+        .container {
+            padding-right: 50px;
+        }
+    }
+    .promo-nut {
+        margin-right: 10%;
+        padding: 94px 80px 164px 165px;
+        &::after {
+            position: static;
+        }
+    }
+    .enumeration-nut {
+        &__text {
+            padding-bottom: 30px;
+        }
+        &__item {
+            padding-top: 37px;
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
 }
 
 @media(max-width: 900px) {
@@ -862,7 +893,7 @@ img {
     }
     .way {
         .container {
-            padding: 100px 70px 200px 70px;
+            padding: 100px 70px 300px 70px;
         }
         &__title {
             font-size: 52px;
@@ -875,6 +906,28 @@ img {
                 top: 0px;
                 left: 385px;
             }
+        }
+    }
+    .promo-nut {
+        padding: 94px 11% 100px 70px;
+        &__title {
+            font-size: 52px;
+            line-height: 60px;
+        }
+        &__prewiev {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+    .enumeration-nut {
+        &__text {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        &__item {
+            padding-top: 24px;
+            font-size: 32px;
+            line-height: 38px;
         }
     }
 }
@@ -895,6 +948,12 @@ img {
             font-size: 58px;
         line-height: 64px;
         width: 500px;
+        }
+    }
+    .promo-nut {
+        padding: 94px 7% 100px 70px;
+        &__title {
+            width: 270px;
         }
     }
 }
@@ -1037,6 +1096,45 @@ img {
             }
         }
     }
+    .nut {
+        .container {
+            flex-direction: column;
+        }
+    }
+    .promo-nut {
+        padding: 55px 7% 70px 40px;
+        &::after {
+            position: absolute;
+            width: 200px;
+            height: 302px;
+            bottom: -108px;
+            right: -73px;
+        }
+        &__prewiev {
+            font-size: 28px;
+            line-height: 32px;
+            .carry {
+                display: inline-block;
+            }
+        }
+        &__title {
+            padding-bottom: 33px;
+            font-size: 38px;
+            line-height: 45px;
+        }
+        &__text {
+            width: 100%;
+        }
+    }
+    .enumeration-nut {
+        padding-top: 70px;
+        padding-left: 40px;
+        &__item {
+            padding-top: 20px;
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
 }
 
 @media(max-width: 500px) {
@@ -1057,6 +1155,12 @@ img {
     .products {
         &__container {
             padding-bottom: 20px;
+        }
+    }
+    .promo-nut {
+        &::after {
+            width: 175px;
+            height: 265px;
         }
     }
 }
@@ -1138,6 +1242,33 @@ img {
                 height: 413px;
                 left: 230px;
             }
+        }
+    }
+    .promo-nut {
+        margin-right: 0;
+        &::after {
+            width: 147px;
+            height: 223px;
+            bottom: -99px;
+            right: 0;
+        }
+        &__title {
+            padding-bottom: 25px;
+            font-size: 32px;
+            line-height: 40px;
+            width: 250px;
+        }
+        &__prewiev {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__btn {
+            padding: 5px 46px;
+        }
+    }
+    .nut {
+        .container {
+            padding-right: 20px;
         }
     }
 }
