@@ -227,7 +227,10 @@ img {
   display: flex;
   padding-top: 20px;
   padding-bottom: 200px;
-  padding-left: 47px;
+}
+
+.products-goods .swiper-slide:first-child {
+  margin-left: 47px;
 }
 
 .products-goods .swiper-slide:nth-child(odd) {
@@ -236,28 +239,24 @@ img {
 
 /*way*/
 .way {
+  position: relative;
   background-color: #ED7B49;
+  overflow-x: hidden;
 }
 
 .way .container {
-  position: relative;
-  margin-top: -5px;
-  padding-top: 200px;
-  padding-bottom: 400px;
+  padding: 200px 100px 400px 160px;
 }
 
-.way .container::before {
+.way__promo::after {
   position: absolute;
   content: "";
   background: url("../img/way-img.png") no-repeat;
+  background-size: contain;
   width: 844px;
   height: 775px;
-  top: -31px;
-  right: -85px;
-}
-
-.way__promo {
-  width: 360px;
+  left: 489px;
+  top: 0;
 }
 
 .way__title {
@@ -271,6 +270,7 @@ img {
 .way__text {
   margin: 0;
   padding-bottom: 47px;
+  width: 350px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -286,43 +286,30 @@ img {
 
 /*nut*/
 .nut {
-  margin-top: -5px;
   background-color: #ED7B49;
 }
 
 .nut .container {
-  margin-left: 0;
-  margin-right: 260px;
   display: flex;
 }
 
 .promo-nut {
   position: relative;
-  padding: 94px 0px 164px 165px;
+  padding: 94px 250px 164px 165px;
   background-color: #BE5A4B;
   border-radius: 0px 220px 0px 0px;
   margin-right: 110px;
-  flex: 0 0 800px;
 }
 
 .promo-nut::after {
   position: absolute;
   content: "";
   background: url("../img/nut.png") no-repeat;
+  background-size: contain;
   width: 350px;
-  height: 433px;
+  height: 529px;
   bottom: 59px;
   right: 17px;
-}
-
-.promo-nut::before {
-  position: absolute;
-  content: "";
-  background: url("../img/hand.svg") no-repeat;
-  width: 86px;
-  height: 158px;
-  top: 239px;
-  right: 39px;
 }
 
 .promo-nut__title {
@@ -331,6 +318,7 @@ img {
   font-size: 85px;
   line-height: 93px;
   font-weight: 700;
+  width: 340px;
 }
 
 .promo-nut__prewiev {
@@ -339,6 +327,10 @@ img {
   font-size: 42px;
   line-height: 50px;
   font-weight: 700;
+}
+
+.promo-nut__prewiev .carry {
+  display: block;
 }
 
 .promo-nut__text {
@@ -366,7 +358,6 @@ img {
 }
 
 .enumeration-nut {
-  flex: 0 0 255px;
   padding-top: 94px;
 }
 
@@ -893,6 +884,47 @@ img {
     font-size: 74px;
     line-height: 84px;
   }
+  .way__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .promo-nut {
+    margin-right: 50px;
+  }
+  .promo-nut__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .promo-nut__prewiev {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .promo-nut::after {
+    width: 300px;
+    height: 454px;
+    bottom: 142px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .nut .container {
+    padding-right: 50px;
+  }
+  .promo-nut {
+    margin-right: 10%;
+    padding: 94px 80px 164px 165px;
+  }
+  .promo-nut::after {
+    position: static;
+  }
+  .enumeration-nut__text {
+    padding-bottom: 30px;
+  }
+  .enumeration-nut__item {
+    padding-top: 37px;
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -948,6 +980,42 @@ img {
     font-size: 16px;
     line-height: 21px;
   }
+  .products-goods .swiper-wrapper {
+    padding-bottom: 100px;
+  }
+  .way .container {
+    padding: 100px 70px 300px 70px;
+  }
+  .way__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .way__promo::after {
+    width: 600px;
+    height: 551px;
+    top: 0px;
+    left: 385px;
+  }
+  .promo-nut {
+    padding: 94px 11% 100px 70px;
+  }
+  .promo-nut__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .promo-nut__prewiev {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .enumeration-nut__text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .enumeration-nut__item {
+    padding-top: 24px;
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -963,6 +1031,12 @@ img {
     font-size: 58px;
     line-height: 64px;
     width: 500px;
+  }
+  .promo-nut {
+    padding: 94px 7% 100px 70px;
+  }
+  .promo-nut__title {
+    width: 270px;
   }
 }
 
@@ -1071,6 +1145,58 @@ img {
   .products-goods__button {
     padding: 7px 22px;
   }
+  .way .container {
+    padding: 100px 70px 200px 40px;
+  }
+  .way__title {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .way__text {
+    width: 260px;
+  }
+  .way__promo::after {
+    width: 500px;
+    height: 459px;
+    left: 270px;
+  }
+  .nut .container {
+    flex-direction: column;
+  }
+  .promo-nut {
+    padding: 55px 7% 70px 40px;
+  }
+  .promo-nut::after {
+    position: absolute;
+    width: 200px;
+    height: 302px;
+    bottom: -108px;
+    right: -73px;
+  }
+  .promo-nut__prewiev {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .promo-nut__prewiev .carry {
+    display: inline-block;
+  }
+  .promo-nut__title {
+    padding-bottom: 33px;
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .promo-nut__text {
+    width: 100%;
+  }
+  .enumeration-nut {
+    padding-top: 70px;
+    padding-left: 40px;
+  }
+  .enumeration-nut__item {
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1088,6 +1214,10 @@ img {
   }
   .products__container {
     padding-bottom: 20px;
+  }
+  .promo-nut::after {
+    width: 175px;
+    height: 265px;
   }
 }
 
@@ -1141,6 +1271,49 @@ img {
   }
   .products-goods .swiper-slide:nth-child(odd) {
     padding-top: 30px;
+  }
+  .way .container {
+    padding: 75px 40px 140px 40px;
+  }
+  .way__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .way__text {
+    width: 212px;
+  }
+  .way__btn {
+    padding: 5px 45px;
+  }
+  .way__promo::after {
+    width: 450px;
+    height: 413px;
+    left: 230px;
+  }
+  .promo-nut {
+    margin-right: 0;
+  }
+  .promo-nut::after {
+    width: 147px;
+    height: 223px;
+    bottom: -99px;
+    right: 0;
+  }
+  .promo-nut__title {
+    padding-bottom: 25px;
+    font-size: 32px;
+    line-height: 40px;
+    width: 250px;
+  }
+  .promo-nut__prewiev {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .promo-nut__btn {
+    padding: 5px 46px;
+  }
+  .nut .container {
+    padding-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
