@@ -7,8 +7,6 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   font-family: 'Roboto', 'Arial', sans-serif;
-  background: url("../img/promo-bgc.jpg") top center no-repeat;
-  background-size: cover;
   color: #000;
   max-width: 1440px;
   height: 100%;
@@ -32,12 +30,17 @@ img {
   width: 100%;
 }
 
-.container {
+/*header*/
+.header {
+  background: url("../img/promo-bgc.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+.header__container {
   margin: 0 auto;
   width: 77.1%;
 }
 
-/*header*/
 .header__toggle {
   display: none;
 }
@@ -129,23 +132,29 @@ img {
 
 /*products*/
 .products {
+  width: 100vw;
+  max-width: 1440px;
   background-color: #ED7B49;
 }
 
 .products__container {
   display: flex;
-  gap: 126px;
   margin: 0 auto;
-  padding-top: 76px;
-  padding-bottom: 100px;
-  width: 900px;
+  padding: 76px 30px 100px;
   align-items: center;
+  justify-content: center;
 }
 
 .products__img {
   background: url("../img/products-gluten.svg") no-repeat;
+  background-size: contain;
+  margin-right: 10%;
   width: 241px;
   height: 241px;
+}
+
+.products__info {
+  width: 506px;
 }
 
 .products__title {
@@ -158,26 +167,12 @@ img {
 
 .products__text {
   margin: 0;
-  width: 491px;
   font-size: 16px;
   line-height: 24px;
 }
 
-.products__goods .container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 200px;
-}
-
-.products-goods__good {
-  position: relative;
-  width: 360px;
-}
-
-.products-goods__img {
-  width: 360px;
-  height: 526px;
+.products-goods img {
+  width: auto;
 }
 
 .products-goods__title {
@@ -200,6 +195,7 @@ img {
 }
 
 .products-goods__button {
+  margin-left: 16px;
   padding: 10px 47px;
   border: 0;
   outline: none;
@@ -220,6 +216,22 @@ img {
 
 .products-goods__button.button-purple {
   background-color: #ABAFD6;
+}
+
+.products-goods.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.products-goods .swiper-wrapper {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 200px;
+  padding-left: 47px;
+}
+
+.products-goods .swiper-slide:nth-child(odd) {
+  padding-top: 142px;
 }
 
 /*way*/
@@ -877,6 +889,10 @@ img {
   .promo__cookes {
     width: 350px;
   }
+  .products__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -898,6 +914,39 @@ img {
     left: 30px;
     width: 57px;
     height: 56px;
+  }
+  .products__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .products__img {
+    margin-right: 6%;
+    width: 165px;
+    height: 165px;
+  }
+  .products__info {
+    width: 375px;
+  }
+  .products__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .products-goods img {
+    width: 250px;
+  }
+  .products-goods__title {
+    bottom: 90px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .products-goods__price {
+    margin-top: 0;
+    padding-bottom: 15px;
+  }
+  .products-goods__button {
+    padding: 7px 34px;
+    font-size: 16px;
+    line-height: 21px;
   }
 }
 
@@ -993,6 +1042,35 @@ img {
   .promo__btn {
     line-height: 23px;
   }
+  .products__img {
+    width: 100px;
+    height: 100px;
+  }
+  .products__title {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .products__info {
+    width: 260px;
+  }
+  .products-goods .swiper-slide:nth-child(odd) {
+    padding-top: 60px;
+  }
+  .products-goods img {
+    width: 200px;
+  }
+  .products-goods__title {
+    bottom: 80px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .products-goods__price {
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .products-goods__button {
+    padding: 7px 22px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1008,10 +1086,13 @@ img {
   .promo {
     padding-top: 70px;
   }
+  .products__container {
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 425px) {
-  .container {
+  .header__container {
     width: 87.5%;
   }
   .header__toggle {
@@ -1050,6 +1131,16 @@ img {
   .promo__btn {
     padding: 0px 16px;
     line-height: 18px;
+  }
+  .products__info {
+    width: 200px;
+  }
+  .products__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .products-goods .swiper-slide:nth-child(odd) {
+    padding-top: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

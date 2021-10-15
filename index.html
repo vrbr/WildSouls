@@ -5,283 +5,320 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Wild Souls</title>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <img class="header__logo" src="img/promo-logo.svg" width="121" height="161" alt="Logo">
-                <div class="header__toggle">
-                    <span></span>
-                </div>
-                <ul class="header__list">
-                    <li class="header__item item-left">
-                        <a href="" class="header__link">Products</a>
-                    </li>
-                    <li class="header__item item-left">
-                        <a href="" class="header__link">Who we are</a>
-                    </li>
-                    <li class="header__item item-left">
-                        <a href="" class="header__link">Concept Store</a>
-                    </li>
-                    <li class="header__item item-right">
-                        <a href="" class="header__link">Recipes</a>
-                    </li>
-                    <li class="header__item item-right">
-                        <a href="" class="header__link">Log In</a>
-                    </li>
-                    <li class="header__item item-right">
-                        <a href="" class="header__link">Cart (0)</a>
-                    </li>
-                    <li class="header__item item-right">
-                        <a href="" class="header__link">EN</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="promo">
-            <h1 class="promo__title">Taste the Wild. Find your Soul</h1>
-            <a href="" class="promo__link"></a>
-            <div class="promo__cookes">
-                <p class="promo__text">Our Website use cookies</p>
-                <button class="promo__btn">Ok</button>
-            </div>
-        </section>
-        <!-- <section class="products">
-            <div class="products__container">
-                <div class="products__img"></div>
-                <div class="products__info">
-                    <h2 class="products__title">Wildly Loved</h2>
-                    <p class="products__text">You will find our wild products in their simplest form. No additives or anything else can spoil their nature</p>
-                </div>
-            </div>
-            <div class="products__goods products-goods">
-                <div class="container">
-                    <div class="products-goods__good">
-                        <img src="img/01.png" alt="" class="products-goods__img img-01">
-                        <h3 class="products-goods__title">The Wild Peanut Butter</h3>
-                        <p class="products-goods__price">€ 4,90</p>
-                        <button class="products-goods__button button-green">Buy Now!</button>
+    <div class="main-container">
+        <header class="header">
+            <section class="header__container">
+                <div class="header__wrapper">
+                    <img class="header__logo" src="img/promo-logo.svg" width="121" height="161" alt="Logo">
+                    <div class="header__toggle">
+                        <span></span>
                     </div>
-                    <div class="products-goods__good">
-                        <img src="img/02.png" alt="" class="products-goods__img img-02">
-                        <h3 class="products-goods__title">Tahini with Cocoa & Honey</h3>
-                        <p class="products-goods__price">€ 5,90</p>
-                        <button class="products-goods__button button-brown">Buy Now!</button>
-                    </div>
-                    <div class="products-goods__good">
-                        <img src="img/03.png" alt="" class="products-goods__img img-03">
-                        <h3 class="products-goods__title">The Wild Hazelnut Butter</h3>
-                        <p class="products-goods__price">€ 6,90</p>
-                        <button class="products-goods__button button-purple">Buy Now!</button>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="way">
-            <div class="container">
-                <div class="way__promo">
-                    <h2 class="way__title">Our wild way</h2>
-                    <p class="way__text">Our philosophy is present in every stage of our production. We are endeavoring to contribute to the creation of a better world.</p>
-                    <button class="way__btn">Discover more!</button>
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="nut">
-            <div class="container">
-                <div class="nut__promo promo-nut">
-                    <h2 class="promo-nut__title">Wild like a<br>Nut??</h2>
-                    <div class="promo-nut__container">
-                        <h3 class="promo-nut__prewiev">Roasted<br>Almond</h3>
-                        <p class="promo-nut__text">All the treasures are hidden in a chest. Respectively, our treasures are enclosed in their Wild shell.</p>
-                        <div class="promo-nut__box">
-                            <span>250G | 5,00€</span>
-                        </div>
-                        <button class="promo-nut__btn">Taste it!</button>
-                    </div>
-                </div>
-                <div class="nut__enumeration enumeration-nut">
-                    <p class="enumeration-nut__text">DISCOVER OUR<br>PRODUCTS THROUGH THE<br>5 TREASURES OF NATURE!</p>
-                    <ul class="enumeration-nut__list">
-                        <li class="enumeration-nut__item">
-                            <a href="">Sesame<sup>20</sup></a>
+                    <ul class="header__list">
+                        <li class="header__item item-left">
+                            <a href="" class="header__link">Products</a>
                         </li>
-                        <li class="enumeration-nut__item">
-                            <a href="">Peanut<sup>5</sup></a>
+                        <li class="header__item item-left">
+                            <a href="" class="header__link">Who we are</a>
                         </li>
-                        <li class="enumeration-nut__item">
-                            <a href="">Almond<sup>9</sup></a>
+                        <li class="header__item item-left">
+                            <a href="" class="header__link">Concept Store</a>
                         </li>
-                        <li class="enumeration-nut__item">
-                            <a href="">Hazelnut<sup>5</sup></a>
+                        <li class="header__item item-right">
+                            <a href="" class="header__link">Recipes</a>
                         </li>
-                        <li class="enumeration-nut__item">
-                            <a href="">Cashew<sup>4</sup></a>
+                        <li class="header__item item-right">
+                            <a href="" class="header__link">Log In</a>
+                        </li>
+                        <li class="header__item item-right">
+                            <a href="" class="header__link">Cart (0)</a>
+                        </li>
+                        <li class="header__item item-right">
+                            <a href="" class="header__link">EN</a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </section> -->
-        <!-- <section class="soul">
-            <div class="container">
-                <h2 class="soul__title">Words from the soul!</h2>
-                <div class="soul__wrapper">
-                    <div class="soul__box">
-                        <h3 class="soul__voice">Popangada</h3>
-                        <p class="soul__text">A different shop in the center of Athens grinds fruit, offers butter made from just one ingredient, and halva flavors that confirm that healthy can be delicious.</p>
-                    </div>
-                    <div class="soul__box">
-                        <h3 class="soul__voice">Athens Voice</h3>
-                        <p class="soul__text">Wild Souls works mainly with sesame and nut products (pistachio, hazelnut, almond, cashews), creating hellish spreads that you want to swallow with the jar.</p>
-                    </div>
+            </section>
+            
+            <section class="promo">
+                <h1 class="promo__title">Taste the Wild. Find your Soul</h1>
+                <div class="promo__cookes">
+                    <p class="promo__text">Our Website use cookies</p>
+                    <button class="promo__btn">Ok</button>
                 </div>
-                <div class="soul__buttons">
-                    <div class="soul__button button-prev"></div>
-                    <div class="soul__button button-next"></div>
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="store">
-            <div class="container">
-                <div class="store__promo">
-                    <h2 class="store__title">The Concept Store</h2>
-                    <p class="store__text">We invite you to explore it, live it, and take photographs of it. But be careful, it is very addictive!</p>
-                    <button class="store__btn">DISCOVER MORE!</button>
-                </div>
-                <div class="store__photo">
-                    <img src="img/store.png" alt="">
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="halva">
-            <div class="container">
-                <div class="halva__promo">
-                    <h2 class="halva__title">Wild Halva</h2>
-                    <h3 class="halva__title-text">A magical seed..</h3>
-                    <p class="halva__text">It is neither a dessert nor a snack nor a proper meal. It is, though, all these simultaneously. It is what you want it to be.</p>
-                    <span>500G | 500G</span>
-                    <button class="halva__btn">Discover them now!</button>
-                </div>
-                <div class="halva__gift">
-                    <p class="halva__gift-text">Spread your Love with a Wild Gift!</p>
-                    <button class="halva__btn">Discover them now!</button>
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="bite">
-            <div class="container">
-                <div class="bite__promo">
-                    <h2 class="bite__title">The Five Treasures</h2>
-                    <p class="bite__text">As Hippocrates said, we are what we eat.<br>Let’s see what happens by eating these WILD treasures.</p>
-                    <button class="bite__btn">Discover them now!</button>
-                </div>
-                <div class="bite__photo">
-                    <img src="img/bite.png" width="746" height="670" alt="">
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="recipes">
-            <h2 class="recipes__title">Wild Recipes</h2>
-            <p class="recipes__text">Take a look at the keyhole of our Wild kitchen! Get ideas on how to<br>turn your own kitchen into a Wild.</p>
-            <div class="recipes__container">
-                <div class="recipes__box">
-                    <img src="img/food-01.jpg" width="450" height="450" alt="" class="recipes__photo">
-                    <p class="recipes__dish">Salty</p>
-                    <p class="recipes__name">Coleslaw with<br>High Fibre Tahini</p>
-                </div>
-                <div class="recipes__box">
-                    <img src="img/food-02.jpg" width="450" height="450" alt="" class="recipes__photo">
-                    <p class="recipes__dish">Salty</p>
-                    <p class="recipes__name">Wild Hummus</p>
-                </div>
-                <div class="recipes__box">
-                    <img src="img/food-03.jpg" width="450" height="450" alt="" class="recipes__photo">
-                    <p class="recipes__dish">Salty</p>
-                    <p class="recipes__name">Wild 6 Ingredient<br>Granola</p>
-                </div>
-            </div>
-        </section> -->
-    </main>
-    <!-- <footer class="footer">
-        <div class="container">
-            <img src="img/logo-footer.svg" width="145" height="193" alt="Logo">
-            <div class="footer__container tools">
-                <div class="tools__container">
-                    <h2 class="tools__title">Stay Wild!</h2>
-                    <input type="email" placeholder="Write your email">
-                </div>
-                <div class="tools__container">
-                    <p class="tools__follow">Follow Us</p>
-                    <ul class="tools__social">
-                        <li><a href="#">
-                            <img src="img/insta.svg" width="22" height="22" alt="">
-                        </a></li>
-                        <li><a href="#">
-                            <img src="img/facebook.svg" width="22" height="22" alt="">
-                        </a></li>
-                    </ul>
-                </div>
-                <div class="tools__container">
-                    <ul class="tools__payment">
-                        <li><img src="img/visa.svg" width="36" height="25" alt=""></li>
-                        <li><img src="img/master.svg" width="36" height="25" alt=""></li>
-                        <li><img src="img/discover.svg" width="36" height="25" alt=""></li>
-                        <li><img src="img/paypal.svg" width="36" height="25" alt=""></li>
-                    </ul>
-                    <p class="tools__copyright">Copyright 2021 Wild Souls</p>
-                    <p class="tools__copyright">Website by Big Horror + No Matter</p>
-                </div>
-            </div>
-            <div class="footer__container nav">
-                <div class="nav__box">
-                    <p class="nav__title">Products</p>
-                    <ul class="nav__list">
-                        <li class="nav__link"><a href="">Sesame Βutter / Tahini</a></li>
-                        <li class="nav__link"><a href="">Nut Butters</a></li>
-                        <li class="nav__link"><a href="">Honey</a></li>
-                        <li class="nav__link"><a href="">Marmalades</a></li>
-                        <li class="nav__link"><a href="">Halva</a></li>
-                        <li class="nav__link"><a href="">Dry Nuts</a></li>
-                        <li class="nav__link"><a href="">Open Sesame</a></li>
-                        <li class="nav__link"><a href="">Gift Card</a></li>
-                    </ul>
-                </div>
-                <div class="nav__box">
-                    <p class="nav__title">Company</p>
-                    <ul class="nav__list">
-                        <li class="nav__link"><a href="">Who we are</a></li>
-                        <li class="nav__link"><a href="">Our Wild Way</a></li>
-                        <li class="nav__link"><a href="">Concept Store</a></li>
-                        <li class="nav__link"><a href="">The Five Treasures</a></li>
-                        <li class="nav__link"><a href="">Recipes</a></li>
-                    </ul>
-                </div>
-                <div class="nav__box">
-                    <p class="nav__title">Contact</p>
-                    <ul class="nav__list">
-                        <li class="nav__link link-mail"><a href="mailto:info@wildsouls.gr">info@wildsouls.gr</a></li>
-                        <li class="nav__link"><a href="tel:+302103231438">+30 210 3231 438</a></li>
-                    </ul>
-                </div>
-                <div class="nav__box">
-                    <p class="nav__title">Help</p>
-                    <ul class="nav__list">
-                        <li class="nav__link"><a href="">Terms & Conditions</a></li>
-                        <li class="nav__link"><a href="">Privacy Policy</a></li>
-                        <li class="nav__link"><a href="">Cookies</a></li>
-                        <li class="nav__link"><a href="">Payment Methods</a></li>
-                        <li class="nav__link"><a href="">Shipping & Returns</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+                <a href="" class="promo__link"></a>
+            </section>
+        </header>
 
+        <main>
+            <section class="products">
+                <div class="products__container">
+                    <div class="products__img"></div>
+                    <div class="products__info">
+                        <h2 class="products__title">Wildly Loved</h2>
+                        <p class="products__text">You will find our wild products in their simplest form. No additives or anything else can spoil their nature</p>
+                    </div>
+                </div>
+                <div class="products__goods products-goods swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/01.png" alt="" class="products-goods__img img-01">
+                            <h3 class="products-goods__title">The Wild Peanut Butter</h3>
+                            <p class="products-goods__price">€ 4,90</p>
+                            <button class="products-goods__button button-green">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/02.png" alt="" class="products-goods__img img-02">
+                            <h3 class="products-goods__title">Tahini with Cocoa & Honey</h3>
+                            <p class="products-goods__price">€ 5,90</p>
+                            <button class="products-goods__button button-brown">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/03.png" alt="" class="products-goods__img img-03">
+                            <h3 class="products-goods__title">The Wild Hazelnut Butter</h3>
+                            <p class="products-goods__price">€ 6,90</p>
+                            <button class="products-goods__button button-purple">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/04.png" alt="" class="products-goods__img img-03">
+                            <h3 class="products-goods__title">The Wild Hazelnut Butter</h3>
+                            <p class="products-goods__price">€ 6,90</p>
+                            <button class="products-goods__button button-purple">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/01.png" alt="" class="products-goods__img img-01">
+                            <h3 class="products-goods__title">The Wild Peanut Butter</h3>
+                            <p class="products-goods__price">€ 4,90</p>
+                            <button class="products-goods__button button-green">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/02.png" alt="" class="products-goods__img img-02">
+                            <h3 class="products-goods__title">Tahini with Cocoa & Honey</h3>
+                            <p class="products-goods__price">€ 5,90</p>
+                            <button class="products-goods__button button-brown">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/03.png" alt="" class="products-goods__img img-03">
+                            <h3 class="products-goods__title">The Wild Hazelnut Butter</h3>
+                            <p class="products-goods__price">€ 6,90</p>
+                            <button class="products-goods__button button-purple">Buy Now!</button>
+                        </div>
+                        <div class="products-goods__good swiper-slide">
+                            <img src="img/04.png" alt="" class="products-goods__img img-03">
+                            <h3 class="products-goods__title">The Wild Hazelnut Butter</h3>
+                            <p class="products-goods__price">€ 6,90</p>
+                            <button class="products-goods__button button-purple">Buy Now!</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="way">
+                <div class="container">
+                    <div class="way__promo">
+                        <h2 class="way__title">Our wild way</h2>
+                        <p class="way__text">Our philosophy is present in every stage of our production. We are endeavoring to contribute to the creation of a better world.</p>
+                        <button class="way__btn">Discover more!</button>
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="nut">
+                <div class="container">
+                    <div class="nut__promo promo-nut">
+                        <h2 class="promo-nut__title">Wild like a<br>Nut??</h2>
+                        <div class="promo-nut__container">
+                            <h3 class="promo-nut__prewiev">Roasted<br>Almond</h3>
+                            <p class="promo-nut__text">All the treasures are hidden in a chest. Respectively, our treasures are enclosed in their Wild shell.</p>
+                            <div class="promo-nut__box">
+                                <span>250G | 5,00€</span>
+                            </div>
+                            <button class="promo-nut__btn">Taste it!</button>
+                        </div>
+                    </div>
+                    <div class="nut__enumeration enumeration-nut">
+                        <p class="enumeration-nut__text">DISCOVER OUR<br>PRODUCTS THROUGH THE<br>5 TREASURES OF NATURE!</p>
+                        <ul class="enumeration-nut__list">
+                            <li class="enumeration-nut__item">
+                                <a href="">Sesame<sup>20</sup></a>
+                            </li>
+                            <li class="enumeration-nut__item">
+                                <a href="">Peanut<sup>5</sup></a>
+                            </li>
+                            <li class="enumeration-nut__item">
+                                <a href="">Almond<sup>9</sup></a>
+                            </li>
+                            <li class="enumeration-nut__item">
+                                <a href="">Hazelnut<sup>5</sup></a>
+                            </li>
+                            <li class="enumeration-nut__item">
+                                <a href="">Cashew<sup>4</sup></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="soul">
+                <div class="container">
+                    <h2 class="soul__title">Words from the soul!</h2>
+                    <div class="soul__wrapper">
+                        <div class="soul__box">
+                            <h3 class="soul__voice">Popangada</h3>
+                            <p class="soul__text">A different shop in the center of Athens grinds fruit, offers butter made from just one ingredient, and halva flavors that confirm that healthy can be delicious.</p>
+                        </div>
+                        <div class="soul__box">
+                            <h3 class="soul__voice">Athens Voice</h3>
+                            <p class="soul__text">Wild Souls works mainly with sesame and nut products (pistachio, hazelnut, almond, cashews), creating hellish spreads that you want to swallow with the jar.</p>
+                        </div>
+                    </div>
+                    <div class="soul__buttons">
+                        <div class="soul__button button-prev"></div>
+                        <div class="soul__button button-next"></div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="store">
+                <div class="container">
+                    <div class="store__promo">
+                        <h2 class="store__title">The Concept Store</h2>
+                        <p class="store__text">We invite you to explore it, live it, and take photographs of it. But be careful, it is very addictive!</p>
+                        <button class="store__btn">DISCOVER MORE!</button>
+                    </div>
+                    <div class="store__photo">
+                        <img src="img/store.png" alt="">
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="halva">
+                <div class="container">
+                    <div class="halva__promo">
+                        <h2 class="halva__title">Wild Halva</h2>
+                        <h3 class="halva__title-text">A magical seed..</h3>
+                        <p class="halva__text">It is neither a dessert nor a snack nor a proper meal. It is, though, all these simultaneously. It is what you want it to be.</p>
+                        <span>500G | 500G</span>
+                        <button class="halva__btn">Discover them now!</button>
+                    </div>
+                    <div class="halva__gift">
+                        <p class="halva__gift-text">Spread your Love with a Wild Gift!</p>
+                        <button class="halva__btn">Discover them now!</button>
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="bite">
+                <div class="container">
+                    <div class="bite__promo">
+                        <h2 class="bite__title">The Five Treasures</h2>
+                        <p class="bite__text">As Hippocrates said, we are what we eat.<br>Let’s see what happens by eating these WILD treasures.</p>
+                        <button class="bite__btn">Discover them now!</button>
+                    </div>
+                    <div class="bite__photo">
+                        <img src="img/bite.png" width="746" height="670" alt="">
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="recipes">
+                <h2 class="recipes__title">Wild Recipes</h2>
+                <p class="recipes__text">Take a look at the keyhole of our Wild kitchen! Get ideas on how to<br>turn your own kitchen into a Wild.</p>
+                <div class="recipes__container">
+                    <div class="recipes__box">
+                        <img src="img/food-01.jpg" width="450" height="450" alt="" class="recipes__photo">
+                        <p class="recipes__dish">Salty</p>
+                        <p class="recipes__name">Coleslaw with<br>High Fibre Tahini</p>
+                    </div>
+                    <div class="recipes__box">
+                        <img src="img/food-02.jpg" width="450" height="450" alt="" class="recipes__photo">
+                        <p class="recipes__dish">Salty</p>
+                        <p class="recipes__name">Wild Hummus</p>
+                    </div>
+                    <div class="recipes__box">
+                        <img src="img/food-03.jpg" width="450" height="450" alt="" class="recipes__photo">
+                        <p class="recipes__dish">Salty</p>
+                        <p class="recipes__name">Wild 6 Ingredient<br>Granola</p>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+        <!-- <footer class="footer">
+            <div class="container">
+                <img src="img/logo-footer.svg" width="145" height="193" alt="Logo">
+                <div class="footer__container tools">
+                    <div class="tools__container">
+                        <h2 class="tools__title">Stay Wild!</h2>
+                        <input type="email" placeholder="Write your email">
+                    </div>
+                    <div class="tools__container">
+                        <p class="tools__follow">Follow Us</p>
+                        <ul class="tools__social">
+                            <li><a href="#">
+                                <img src="img/insta.svg" width="22" height="22" alt="">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/facebook.svg" width="22" height="22" alt="">
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="tools__container">
+                        <ul class="tools__payment">
+                            <li><img src="img/visa.svg" width="36" height="25" alt=""></li>
+                            <li><img src="img/master.svg" width="36" height="25" alt=""></li>
+                            <li><img src="img/discover.svg" width="36" height="25" alt=""></li>
+                            <li><img src="img/paypal.svg" width="36" height="25" alt=""></li>
+                        </ul>
+                        <p class="tools__copyright">Copyright 2021 Wild Souls</p>
+                        <p class="tools__copyright">Website by Big Horror + No Matter</p>
+                    </div>
+                </div>
+                <div class="footer__container nav">
+                    <div class="nav__box">
+                        <p class="nav__title">Products</p>
+                        <ul class="nav__list">
+                            <li class="nav__link"><a href="">Sesame Βutter / Tahini</a></li>
+                            <li class="nav__link"><a href="">Nut Butters</a></li>
+                            <li class="nav__link"><a href="">Honey</a></li>
+                            <li class="nav__link"><a href="">Marmalades</a></li>
+                            <li class="nav__link"><a href="">Halva</a></li>
+                            <li class="nav__link"><a href="">Dry Nuts</a></li>
+                            <li class="nav__link"><a href="">Open Sesame</a></li>
+                            <li class="nav__link"><a href="">Gift Card</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__box">
+                        <p class="nav__title">Company</p>
+                        <ul class="nav__list">
+                            <li class="nav__link"><a href="">Who we are</a></li>
+                            <li class="nav__link"><a href="">Our Wild Way</a></li>
+                            <li class="nav__link"><a href="">Concept Store</a></li>
+                            <li class="nav__link"><a href="">The Five Treasures</a></li>
+                            <li class="nav__link"><a href="">Recipes</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__box">
+                        <p class="nav__title">Contact</p>
+                        <ul class="nav__list">
+                            <li class="nav__link link-mail"><a href="mailto:info@wildsouls.gr">info@wildsouls.gr</a></li>
+                            <li class="nav__link"><a href="tel:+302103231438">+30 210 3231 438</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__box">
+                        <p class="nav__title">Help</p>
+                        <ul class="nav__list">
+                            <li class="nav__link"><a href="">Terms & Conditions</a></li>
+                            <li class="nav__link"><a href="">Privacy Policy</a></li>
+                            <li class="nav__link"><a href="">Cookies</a></li>
+                            <li class="nav__link"><a href="">Payment Methods</a></li>
+                            <li class="nav__link"><a href="">Shipping & Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
