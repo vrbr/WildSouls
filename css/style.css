@@ -227,7 +227,10 @@ img {
   display: flex;
   padding-top: 20px;
   padding-bottom: 200px;
-  padding-left: 47px;
+}
+
+.products-goods .swiper-slide:first-child {
+  margin-left: 47px;
 }
 
 .products-goods .swiper-slide:nth-child(odd) {
@@ -236,28 +239,24 @@ img {
 
 /*way*/
 .way {
+  position: relative;
   background-color: #ED7B49;
+  overflow-x: hidden;
 }
 
 .way .container {
-  position: relative;
-  margin-top: -5px;
-  padding-top: 200px;
-  padding-bottom: 400px;
+  padding: 200px 100px 400px 160px;
 }
 
-.way .container::before {
+.way__promo::after {
   position: absolute;
   content: "";
   background: url("../img/way-img.png") no-repeat;
+  background-size: contain;
   width: 844px;
   height: 775px;
-  top: -31px;
-  right: -85px;
-}
-
-.way__promo {
-  width: 360px;
+  left: 489px;
+  top: 0;
 }
 
 .way__title {
@@ -271,6 +270,7 @@ img {
 .way__text {
   margin: 0;
   padding-bottom: 47px;
+  width: 350px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -893,6 +893,10 @@ img {
     font-size: 74px;
     line-height: 84px;
   }
+  .way__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -947,6 +951,22 @@ img {
     padding: 7px 34px;
     font-size: 16px;
     line-height: 21px;
+  }
+  .products-goods .swiper-wrapper {
+    padding-bottom: 100px;
+  }
+  .way .container {
+    padding: 100px 70px 200px 70px;
+  }
+  .way__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .way__promo::after {
+    width: 600px;
+    height: 551px;
+    top: 0px;
+    left: 385px;
   }
 }
 
@@ -1071,6 +1091,21 @@ img {
   .products-goods__button {
     padding: 7px 22px;
   }
+  .way .container {
+    padding: 100px 70px 200px 40px;
+  }
+  .way__title {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .way__text {
+    width: 260px;
+  }
+  .way__promo::after {
+    width: 500px;
+    height: 459px;
+    left: 270px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1141,6 +1176,24 @@ img {
   }
   .products-goods .swiper-slide:nth-child(odd) {
     padding-top: 30px;
+  }
+  .way .container {
+    padding: 75px 40px 140px 40px;
+  }
+  .way__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .way__text {
+    width: 212px;
+  }
+  .way__btn {
+    padding: 5px 45px;
+  }
+  .way__promo::after {
+    width: 450px;
+    height: 413px;
+    left: 230px;
   }
 }
 /*# sourceMappingURL=style.css.map */
