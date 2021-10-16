@@ -36,3 +36,16 @@ var swiper = new Swiper(".mySwiper", {
         }
     }
 });
+
+const tabs = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', event => {
+        document.querySelector('.tab.active').classList.remove('active');
+        event.currentTarget.classList.add('active');
+        document.querySelector('.soul__wrapper.show').classList.remove('show');
+
+        const selectedContent = event.currentTarget.dataset.content;
+        document.querySelector(selectedContent).classList.add('show');
+    })
+});

@@ -339,31 +339,37 @@ img {
 /*soul*/
 .soul {
     background-color: #E9A8C6;
-    text-align: center;
     .container {
+        margin: 0 auto;
         padding-top: 129px;
         padding-bottom: 99px;
+        width: 1000px;
     }
     &__wrapper {
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 38px;
+        display: none;
+        &.show {
+            display: flex;
+            text-align: center;
+        }
     }
     &__box {
         position: relative;
-        padding-top: 85px;
+        padding-left: 114px;
+        padding-right: 114px;
         &::before {
             position: absolute;
             content: "";
             background: url("../img/lips.svg");
             width: 93px;
             height: 111px;
-            top: -50px;
-            left: 123px;
+            top: -128px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     &__title {
         margin: 0 auto;
+        padding-bottom: 85px;
         width: 105px;
         font-size: 21px;
         line-height: 25px;
@@ -381,23 +387,33 @@ img {
     }
     &__text {
         margin: 0 auto;
-        width: 343px;
         font-size: 16px;
         line-height: 24px;
     }
-    &__buttons {
+    &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tab {
+            padding: 0;
+            background-color: #000;
+            width: 10px;
+            height: 10px;
+            border: none;
+            outline: none;
+            transition: background-color 0.15s ease-in-out;
+            &.active {
+                background-color: transparent;
+                border: 1px solid #000;
+            }
+        }
+    }
+    &__item {
         display: flex;
         justify-content: center;
-        gap: 16px;
-    }
-    &__button {
-        width: 10px;
-        height: 10px;
-        box-sizing: border-box;
-        border: 1px solid #000000;
-        &.button-next {
-            background: #000000;
-        }
+        align-items: center;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -829,6 +845,15 @@ img {
             line-height: 46px;
         }
     }
+    .soul {
+        .container {
+            width: 890px;
+        }
+        &__box {
+            padding-left: 54px;
+            padding-right: 54px;
+        }
+    }
 }
 
 @media(max-width: 900px) {
@@ -930,6 +955,19 @@ img {
             line-height: 38px;
         }
     }
+    .soul {
+        .container {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            width: 600px;
+        }
+        &__box {
+            padding: 0;
+            & + .soul__box {
+                margin-left: 65px;
+            }
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -954,6 +992,11 @@ img {
         padding: 94px 7% 100px 70px;
         &__title {
             width: 270px;
+        }
+    }
+    .soul {
+        .container {
+            width: 500px;
         }
     }
 }
@@ -1127,12 +1170,32 @@ img {
         }
     }
     .enumeration-nut {
-        padding-top: 70px;
-        padding-left: 40px;
+        padding: 70px 0 70px 40px;
         &__item {
             padding-top: 20px;
             font-size: 28px;
             line-height: 32px;
+        }
+    }
+    .soul {
+        .container {
+            width: 300px;
+        }
+        &__wrapper {
+            &.show {
+                flex-direction: column;
+                margin-top: 60px;
+            }
+        }
+        &__box {
+            & + .soul__box {
+                margin-left: 0;
+                margin-top: 150px;
+                margin-bottom: 40px;
+            }
+            &::before {
+                top: -114px;
+            }
         }
     }
 }
@@ -1269,6 +1332,11 @@ img {
     .nut {
         .container {
             padding-right: 20px;
+        }
+    }
+    .soul {
+        .container {
+            width: 280px;
         }
     }
 }

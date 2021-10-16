@@ -384,23 +384,28 @@ img {
 /*soul*/
 .soul {
   background-color: #E9A8C6;
-  text-align: center;
 }
 
 .soul .container {
+  margin: 0 auto;
   padding-top: 129px;
   padding-bottom: 99px;
+  width: 1000px;
 }
 
 .soul__wrapper {
+  display: none;
+}
+
+.soul__wrapper.show {
   display: flex;
-  justify-content: space-around;
-  padding-bottom: 38px;
+  text-align: center;
 }
 
 .soul__box {
   position: relative;
-  padding-top: 85px;
+  padding-left: 114px;
+  padding-right: 114px;
 }
 
 .soul__box::before {
@@ -409,12 +414,14 @@ img {
   background: url("../img/lips.svg");
   width: 93px;
   height: 111px;
-  top: -50px;
-  left: 123px;
+  top: -128px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .soul__title {
   margin: 0 auto;
+  padding-bottom: 85px;
   width: 105px;
   font-size: 21px;
   line-height: 25px;
@@ -434,26 +441,37 @@ img {
 
 .soul__text {
   margin: 0 auto;
-  width: 343px;
   font-size: 16px;
   line-height: 24px;
 }
 
-.soul__buttons {
+.soul__tabs {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 16px;
 }
 
-.soul__button {
+.soul__tabs .tab {
+  padding: 0;
+  background-color: #000;
   width: 10px;
   height: 10px;
-  box-sizing: border-box;
-  border: 1px solid #000000;
+  border: none;
+  outline: none;
+  transition: background-color 0.15s ease-in-out;
 }
 
-.soul__button.button-next {
-  background: #000000;
+.soul__tabs .tab.active {
+  background-color: transparent;
+  border: 1px solid #000;
+}
+
+.soul__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
 }
 
 /*store*/
@@ -925,6 +943,13 @@ img {
     font-size: 38px;
     line-height: 46px;
   }
+  .soul .container {
+    width: 890px;
+  }
+  .soul__box {
+    padding-left: 54px;
+    padding-right: 54px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1016,6 +1041,17 @@ img {
     font-size: 32px;
     line-height: 38px;
   }
+  .soul .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 600px;
+  }
+  .soul__box {
+    padding: 0;
+  }
+  .soul__box + .soul__box {
+    margin-left: 65px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1037,6 +1073,9 @@ img {
   }
   .promo-nut__title {
     width: 270px;
+  }
+  .soul .container {
+    width: 500px;
   }
 }
 
@@ -1189,13 +1228,27 @@ img {
     width: 100%;
   }
   .enumeration-nut {
-    padding-top: 70px;
-    padding-left: 40px;
+    padding: 70px 0 70px 40px;
   }
   .enumeration-nut__item {
     padding-top: 20px;
     font-size: 28px;
     line-height: 32px;
+  }
+  .soul .container {
+    width: 300px;
+  }
+  .soul__wrapper.show {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  .soul__box + .soul__box {
+    margin-left: 0;
+    margin-top: 150px;
+    margin-bottom: 40px;
+  }
+  .soul__box::before {
+    top: -114px;
   }
 }
 
@@ -1314,6 +1367,9 @@ img {
   }
   .nut .container {
     padding-right: 20px;
+  }
+  .soul .container {
+    width: 280px;
   }
 }
 /*# sourceMappingURL=style.css.map */
