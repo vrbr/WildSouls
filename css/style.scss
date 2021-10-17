@@ -643,19 +643,24 @@ img {
 .recipes {
     margin-top: -5px;
     padding-bottom: 300px;
+    width: 100vw;
     background-color: #F5AFB9;
+    &__wrapper-text {
+        margin-left: auto;
+        margin-right: 18%;
+        padding-top: 130px;
+        padding-bottom: 190px;
+        width: 505px;
+    }
     &__title{
         margin: 0;
         padding-bottom: 28px;
-        padding-left: 640px;
         font-size: 85px;
         line-height: 93px;
         font-weight: 700;
     }
     &__text {
         margin: 0;
-        padding-bottom: 191px;
-        padding-left: 640px;
         font-size: 16px;
         line-height: 24px;
     }
@@ -664,13 +669,13 @@ img {
         justify-content: space-between;
     }
     &__box {
-        flex: 0 0 33.33%;
-        &:nth-child(2) {
+        &:nth-child(2n) {
             padding-top: 60px;
         }
     }
     &__photo {
         object-fit: contain;
+        height: auto;
     }
     &__dish {
         margin: 0;
@@ -896,6 +901,20 @@ img {
         &__title {
             font-size: 74px;
             line-height: 84px;
+        }
+    }
+    .recipes {
+        &__wrapper-text {
+            margin-right: 11%;
+            padding-bottom: 120px;
+        }
+        &__title {
+            font-size: 74px;
+            line-height: 84px;
+        }
+        &__name {
+            font-size: 38px;
+            line-height: 46px;
         }
     }
 }
@@ -1134,7 +1153,7 @@ img {
     }
     .bite {
         .container {
-            padding: 100px 70px 209px 70px;
+            padding: 100px 70px 180px 70px;
         }
         &::before {
             width: 190px;
@@ -1158,6 +1177,24 @@ img {
         &__btn {
             width: 258px;
             padding: 5px 35px;
+        }
+    }
+    .recipes {
+        &__wrapper-text {
+            margin-right: 5%;
+            padding-top: 30px;
+            padding-bottom: 70px;
+        }
+        &__title {
+            font-size: 52px;
+            line-height: 60px;
+        }
+        &__dish {
+            padding-top: 25px;
+        }
+        &__name {
+            font-size: 32px;
+            line-height: 38px;
         }
     }
 }
@@ -1507,6 +1544,23 @@ img {
             line-height: 45px;
         }
     }
+    .recipes {
+        &__wrapper-text {
+            margin-right: 0;
+            margin-left: 40px;
+            padding-bottom: 50px;
+            padding-right: 40px;
+            width: fit-content;
+        }
+        &__title {
+            font-size: 38px;
+            line-height: 45px;
+        }
+        &__name {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
 }
 
 @media(max-width: 500px) {
@@ -1742,6 +1796,16 @@ img {
             height: 404px;
             left: 239px;
             top: 70px;
+        }
+    }
+    .recipes {
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        &__name {
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 }

@@ -728,13 +728,21 @@ img {
 .recipes {
   margin-top: -5px;
   padding-bottom: 300px;
+  width: 100vw;
   background-color: #F5AFB9;
+}
+
+.recipes__wrapper-text {
+  margin-left: auto;
+  margin-right: 18%;
+  padding-top: 130px;
+  padding-bottom: 190px;
+  width: 505px;
 }
 
 .recipes__title {
   margin: 0;
   padding-bottom: 28px;
-  padding-left: 640px;
   font-size: 85px;
   line-height: 93px;
   font-weight: 700;
@@ -742,8 +750,6 @@ img {
 
 .recipes__text {
   margin: 0;
-  padding-bottom: 191px;
-  padding-left: 640px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -753,16 +759,13 @@ img {
   justify-content: space-between;
 }
 
-.recipes__box {
-  flex: 0 0 33.33%;
-}
-
-.recipes__box:nth-child(2) {
+.recipes__box:nth-child(2n) {
   padding-top: 60px;
 }
 
 .recipes__photo {
   object-fit: contain;
+  height: auto;
 }
 
 .recipes__dish {
@@ -997,6 +1000,18 @@ img {
     font-size: 74px;
     line-height: 84px;
   }
+  .recipes__wrapper-text {
+    margin-right: 11%;
+    padding-bottom: 120px;
+  }
+  .recipes__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .recipes__name {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -1206,7 +1221,7 @@ img {
     min-width: 225px;
   }
   .bite .container {
-    padding: 100px 70px 209px 70px;
+    padding: 100px 70px 180px 70px;
   }
   .bite::before {
     width: 190px;
@@ -1230,6 +1245,22 @@ img {
   .bite__btn {
     width: 258px;
     padding: 5px 35px;
+  }
+  .recipes__wrapper-text {
+    margin-right: 5%;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  .recipes__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .recipes__dish {
+    padding-top: 25px;
+  }
+  .recipes__name {
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
@@ -1534,6 +1565,21 @@ img {
     font-size: 38px;
     line-height: 45px;
   }
+  .recipes__wrapper-text {
+    margin-right: 0;
+    margin-left: 40px;
+    padding-bottom: 50px;
+    padding-right: 40px;
+    width: fit-content;
+  }
+  .recipes__title {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .recipes__name {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1738,6 +1784,14 @@ img {
     height: 404px;
     left: 239px;
     top: 70px;
+  }
+  .recipes__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .recipes__name {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
