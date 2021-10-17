@@ -477,7 +477,6 @@ img {
 /*store*/
 .store {
   position: relative;
-  margin-top: -5px;
   background-color: #F5AFB9;
   overflow-x: hidden;
 }
@@ -507,7 +506,7 @@ img {
 .store .container {
   display: flex;
   justify-content: space-between;
-  padding: 200px 100px 400px 160px;
+  padding: 200px 100px 400px 165px;
   margin: 0;
   width: 100%;
 }
@@ -660,38 +659,49 @@ img {
 
 /*bite*/
 .bite {
-  margin-top: -5px;
-  background-color: #F5AFB9;
-}
-
-.bite .container {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 209px;
-  padding-bottom: 209px;
-  margin: 0;
-  width: 100%;
-  padding-left: 165px;
+  background-color: #F5AFB9;
+  overflow: hidden;
 }
 
-.bite .container::before {
+.bite::after {
+  position: absolute;
+  content: "";
+  background: url("../img/bite.png") no-repeat;
+  background-size: contain;
+  width: 746px;
+  height: 760px;
+  top: 222px;
+  left: 673px;
+}
+
+.bite::before {
   position: absolute;
   content: "";
   background: url("../img/bite.svg") no-repeat;
+  background-size: contain;
   width: 282px;
   height: 282px;
-  top: 0px;
-  left: 505px;
+  top: 89px;
+  left: 346px;
+}
+
+.bite .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 256px 100px 209px 165px;
+  margin: 0;
+  width: 100%;
 }
 
 .bite__promo {
-  width: 385px;
+  padding-top: 149px;
 }
 
 .bite__title {
   margin: 0;
   padding-bottom: 12px;
+  width: 385px;
   font-size: 85px;
   line-height: 93px;
   font-weight: 700;
@@ -700,6 +710,7 @@ img {
 .bite__text {
   margin: 0;
   padding-bottom: 53px;
+  width: 350px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -979,6 +990,13 @@ img {
     width: 125px;
     height: 278px;
   }
+  .bite::after {
+    left: 564px;
+  }
+  .bite__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -1187,6 +1205,32 @@ img {
   .halva__gift .halva__btn {
     min-width: 225px;
   }
+  .bite .container {
+    padding: 100px 70px 209px 70px;
+  }
+  .bite::before {
+    width: 190px;
+    height: 190px;
+    left: 220px;
+    top: 33px;
+  }
+  .bite::after {
+    width: 600px;
+    height: 539px;
+    left: 384px;
+    top: 92px;
+  }
+  .bite__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .bite__text {
+    width: 250px;
+  }
+  .bite__btn {
+    width: 258px;
+    padding: 5px 35px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1231,6 +1275,9 @@ img {
   }
   .halva__gift::before {
     top: 57px;
+  }
+  .bite .container {
+    padding-bottom: 160px;
   }
 }
 
@@ -1466,6 +1513,27 @@ img {
     font-size: 28px;
     line-height: 32px;
   }
+  .bite .container {
+    padding: 70px 70px 180px 40px;
+  }
+  .bite::before {
+    width: 120px;
+    height: 120px;
+  }
+  .bite::after {
+    width: 530px;
+    height: 476px;
+    left: 306px;
+    top: 58px;
+  }
+  .bite__promo {
+    padding-top: 50px;
+  }
+  .bite__title {
+    width: 287px;
+    font-size: 38px;
+    line-height: 45px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1644,6 +1712,32 @@ img {
   .halva__gift-text {
     font-size: 24px;
     line-height: 28px;
+  }
+  .bite .container {
+    padding: 75px 40px 140px 40px;
+  }
+  .bite__title {
+    width: 187px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .bite__text {
+    width: 200px;
+  }
+  .bite__btn {
+    width: 220px;
+  }
+  .bite::before {
+    left: 173px;
+    top: 47px;
+    width: 100px;
+    height: 100px;
+  }
+  .bite::after {
+    width: 450px;
+    height: 404px;
+    left: 239px;
+    top: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */

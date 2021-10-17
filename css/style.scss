@@ -420,7 +420,6 @@ img {
 /*store*/
 .store {
     position: relative;
-    margin-top: -5px;
     background-color: #F5AFB9;
     overflow-x: hidden;
     &::after {
@@ -446,7 +445,7 @@ img {
     .container {
         display: flex;
         justify-content: space-between;
-        padding: 200px 100px 400px 160px;
+        padding: 200px 100px 400px 165px;
         margin: 0;
         width: 100%;
     }
@@ -582,34 +581,43 @@ img {
 
 /*bite*/
 .bite {
-    margin-top: -5px;
+    position: relative;
     background-color: #F5AFB9;
-    .container {
-        position: relative;
-        display: flex;
-        -webkit-box-pack: justify;
-        justify-content: space-between;
-        padding-top: 209px;
-        padding-bottom: 209px;
-        margin: 0;
-        width: 100%;
-        padding-left: 165px;
-        &::before {
-            position: absolute;
+    overflow: hidden;
+    &::after {
+        position: absolute;
+        content: "";
+        background: url("../img/bite.png") no-repeat;
+        background-size: contain;
+        width: 746px;
+        height: 760px;
+        top: 222px;
+        left: 673px;
+    }
+    &::before {
+        position: absolute;
         content: "";
         background: url("../img/bite.svg") no-repeat;
+        background-size: contain;
         width: 282px;
         height: 282px;
-        top: 0px;
-        left: 505px;
-        }
+        top: 89px;
+        left: 346px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 256px 100px 209px 165px;
+        margin: 0;
+        width: 100%;
     }
     &__promo {
-        width: 385px;
+        padding-top: 149px;
     }
     &__title {
         margin: 0;
         padding-bottom: 12px;
+        width: 385px;
         font-size: 85px;
         line-height: 93px;
         font-weight: 700;
@@ -617,6 +625,7 @@ img {
     &__text {
         margin: 0;
         padding-bottom: 53px;
+        width: 350px;
         font-size: 16px;
         line-height: 24px;
     }
@@ -880,6 +889,15 @@ img {
             }
         }
     }
+    .bite {
+        &::after {
+            left: 564px;
+        }
+        &__title {
+            font-size: 74px;
+            line-height: 84px;
+        }
+    }
 }
 
 @media(max-width: 1120px) {
@@ -1114,6 +1132,34 @@ img {
             }
         }
     }
+    .bite {
+        .container {
+            padding: 100px 70px 209px 70px;
+        }
+        &::before {
+            width: 190px;
+            height: 190px;
+            left: 220px;
+            top: 33px;
+        }
+        &::after {
+            width: 600px;
+            height: 539px;
+            left: 384px;
+            top: 92px;
+        }
+        &__title {
+            font-size: 52px;
+            line-height: 60px;
+        }
+        &__text {
+            width: 250px;
+        }
+        &__btn {
+            width: 258px;
+            padding: 5px 35px;
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -1167,6 +1213,11 @@ img {
             &::before {
                 top: 57px;
             }
+        }
+    }
+    .bite {
+        .container {
+            padding-bottom: 160px;
         }
     }
 }
@@ -1433,6 +1484,29 @@ img {
             }
         }
     }
+    .bite {
+        .container {
+            padding: 70px 70px 180px 40px;
+        }
+        &::before {
+            width: 120px;
+            height: 120px;
+        }
+        &::after {
+            width: 530px;
+            height: 476px;
+            left: 306px;
+            top: 58px;
+        }
+        &__promo {
+            padding-top: 50px;
+        }
+        &__title {
+            width: 287px;
+            font-size: 38px;
+            line-height: 45px;
+        }
+    }
 }
 
 @media(max-width: 500px) {
@@ -1640,6 +1714,34 @@ img {
                 font-size: 24px;
                 line-height: 28px;
             }
+        }
+    }
+    .bite {
+        .container {
+            padding: 75px 40px 140px 40px;
+        }
+        &__title {
+            width: 187px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+        &__text {
+            width: 200px;
+        }
+        &__btn {
+            width: 220px;
+        }
+        &::before {
+            left: 173px;
+            top: 47px;
+            width: 100px;
+            height: 100px;
+        }
+        &::after {
+            width: 450px;
+            height: 404px;
+            left: 239px;
+            top: 70px;
         }
     }
 }
