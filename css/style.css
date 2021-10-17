@@ -476,38 +476,48 @@ img {
 
 /*store*/
 .store {
-  margin-top: -5px;
-  background-color: #F5AFB9;
-}
-
-.store .container {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 209px;
-  padding-bottom: 209px;
-  margin: 0;
-  width: 100%;
-  padding-left: 165px;
+  background-color: #F5AFB9;
+  overflow-x: hidden;
 }
 
-.store .container::before {
+.store::after {
+  position: absolute;
+  content: "";
+  background: url("../img/store.png") no-repeat;
+  background-size: contain;
+  width: 887px;
+  height: 738px;
+  top: 200px;
+  left: 554px;
+}
+
+.store::before {
   position: absolute;
   content: "";
   background: url("../img/plastic.svg") no-repeat;
+  background-size: contain;
   width: 282px;
   height: 282px;
   top: 65px;
   left: 350px;
 }
 
+.store .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 200px 100px 400px 165px;
+  margin: 0;
+  width: 100%;
+}
+
 .store__promo {
-  flex: 0 0 336px;
   padding-top: 149px;
 }
 
 .store__title {
   margin: 0;
+  width: 400px;
   padding-bottom: 13px;
   font-size: 85px;
   font-weight: 600;
@@ -516,6 +526,7 @@ img {
 
 .store__text {
   margin: 0;
+  width: 350px;
   padding-bottom: 47px;
   font-size: 16px;
   line-height: 24px;
@@ -532,35 +543,36 @@ img {
 
 /*halva*/
 .halva {
-  margin-top: -5px;
   background-color: #F5AFB9;
 }
 
 .halva .container {
   display: flex;
-  margin-left: 0;
-  margin-right: 165px;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding: 50px 11% 100px 0;
+}
+
+.halva__wrapper {
+  position: relative;
+  margin-right: -50px;
+}
+
+.halva__wrapper::before {
+  position: absolute;
+  content: "";
+  background: url("../img/halva.png") no-repeat;
+  background-size: contain;
+  width: 203px;
+  height: 331px;
+  right: -213px;
+  top: 22px;
 }
 
 .halva__promo {
   position: relative;
-  margin-right: 15px;
-  padding: 94px 0px 105px 165px;
-  flex: 0 0 800px;
+  margin-right: 57px;
+  padding: 94px 25% 105px 165px;
   background-color: #ABAFD6;
   border-radius: 0px 220px 0px 0px;
-}
-
-.halva__promo::before {
-  position: absolute;
-  content: "";
-  background: url("../img/halva.png") no-repeat;
-  width: 350px;
-  height: 385px;
-  right: 0;
-  top: 220px;
 }
 
 .halva__promo span {
@@ -570,9 +582,14 @@ img {
   line-height: 31px;
 }
 
+.halva__promo .halva__btn {
+  width: 289px;
+}
+
 .halva__title {
   margin: 0;
   padding-bottom: 53px;
+  width: 200%;
   font-size: 85px;
   line-height: 93px;
   font-weight: 700;
@@ -608,7 +625,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex: 0 0 445px;
+  align-items: center;
   padding: 55px 58px;
   height: 681px;
   text-align: center;
@@ -619,10 +636,12 @@ img {
   position: absolute;
   content: "";
   background: url("../img/love.svg") no-repeat;
+  background-size: contain;
   width: 147px;
   height: 327px;
   top: 65px;
-  left: 149px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .halva__gift-text {
@@ -634,43 +653,55 @@ img {
 }
 
 .halva__gift .halva__btn {
+  min-width: 248px;
   padding: 16px 42px;
 }
 
 /*bite*/
 .bite {
-  margin-top: -5px;
-  background-color: #F5AFB9;
-}
-
-.bite .container {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 209px;
-  padding-bottom: 209px;
-  margin: 0;
-  width: 100%;
-  padding-left: 165px;
+  background-color: #F5AFB9;
+  overflow: hidden;
 }
 
-.bite .container::before {
+.bite::after {
+  position: absolute;
+  content: "";
+  background: url("../img/bite.png") no-repeat;
+  background-size: contain;
+  width: 746px;
+  height: 760px;
+  top: 222px;
+  left: 673px;
+}
+
+.bite::before {
   position: absolute;
   content: "";
   background: url("../img/bite.svg") no-repeat;
+  background-size: contain;
   width: 282px;
   height: 282px;
-  top: 0px;
-  left: 505px;
+  top: 89px;
+  left: 346px;
+}
+
+.bite .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 256px 100px 209px 165px;
+  margin: 0;
+  width: 100%;
 }
 
 .bite__promo {
-  width: 385px;
+  padding-top: 149px;
 }
 
 .bite__title {
   margin: 0;
   padding-bottom: 12px;
+  width: 385px;
   font-size: 85px;
   line-height: 93px;
   font-weight: 700;
@@ -679,6 +710,7 @@ img {
 .bite__text {
   margin: 0;
   padding-bottom: 53px;
+  width: 350px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -696,13 +728,21 @@ img {
 .recipes {
   margin-top: -5px;
   padding-bottom: 300px;
+  width: 100vw;
   background-color: #F5AFB9;
+}
+
+.recipes__wrapper-text {
+  margin-left: auto;
+  margin-right: 18%;
+  padding-top: 130px;
+  padding-bottom: 190px;
+  width: 505px;
 }
 
 .recipes__title {
   margin: 0;
   padding-bottom: 28px;
-  padding-left: 640px;
   font-size: 85px;
   line-height: 93px;
   font-weight: 700;
@@ -710,8 +750,6 @@ img {
 
 .recipes__text {
   margin: 0;
-  padding-bottom: 191px;
-  padding-left: 640px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -721,16 +759,13 @@ img {
   justify-content: space-between;
 }
 
-.recipes__box {
-  flex: 0 0 33.33%;
-}
-
-.recipes__box:nth-child(2) {
+.recipes__box:nth-child(2n) {
   padding-top: 60px;
 }
 
 .recipes__photo {
   object-fit: contain;
+  height: auto;
 }
 
 .recipes__dish {
@@ -922,6 +957,61 @@ img {
     height: 454px;
     bottom: 142px;
   }
+  .store__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .store .container {
+    padding-bottom: 300px;
+  }
+  .halva__promo {
+    padding: 94px 19% 105px 165px;
+  }
+  .halva__wrapper::before {
+    right: -135px;
+    width: 165px;
+    height: 270px;
+  }
+  .halva__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .halva__title-text {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .halva__gift {
+    padding: 55px 40px;
+  }
+  .halva__gift-text {
+    width: 120%;
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .halva__gift::before {
+    top: 65px;
+    width: 125px;
+    height: 278px;
+  }
+  .bite::after {
+    left: 564px;
+  }
+  .bite__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .recipes__wrapper-text {
+    margin-right: 11%;
+    padding-bottom: 120px;
+  }
+  .recipes__title {
+    font-size: 74px;
+    line-height: 84px;
+  }
+  .recipes__name {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -949,6 +1039,26 @@ img {
   .soul__box {
     padding-left: 54px;
     padding-right: 54px;
+  }
+  .halva .container {
+    padding-right: 0;
+  }
+  .halva__wrapper::before {
+    position: static;
+  }
+  .halva__promo {
+    margin-right: 30px;
+    padding: 90px 9% 80px 165px;
+  }
+  .halva__title {
+    width: 100%;
+  }
+  .halva__gift {
+    max-width: 330px;
+    height: auto;
+  }
+  .halva__gift-text {
+    width: 100%;
   }
 }
 
@@ -1052,6 +1162,106 @@ img {
   .soul__box + .soul__box {
     margin-left: 65px;
   }
+  .store .container {
+    padding: 100px 70px 200px 70px;
+  }
+  .store__title {
+    width: 200px;
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .store__text {
+    width: 250px;
+  }
+  .store::after {
+    width: 700px;
+    height: 570px;
+    top: 121px;
+    left: 336px;
+  }
+  .store::before {
+    width: 190px;
+    height: 190px;
+    left: 220px;
+    top: 33px;
+  }
+  .halva__promo {
+    padding: 70px 60px 80px 70px;
+  }
+  .halva__promo .halva__btn {
+    width: 258px;
+  }
+  .halva__title {
+    width: 70%;
+    padding-bottom: 49px;
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .halva__title-text {
+    padding-bottom: 41px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .halva__btn {
+    padding: 5px 35px;
+  }
+  .halva__gift {
+    max-width: 300px;
+  }
+  .halva__gift::before {
+    top: 87px;
+    width: 100px;
+    height: 223px;
+  }
+  .halva__gift-text {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .halva__gift .halva__btn {
+    min-width: 225px;
+  }
+  .bite .container {
+    padding: 100px 70px 180px 70px;
+  }
+  .bite::before {
+    width: 190px;
+    height: 190px;
+    left: 220px;
+    top: 33px;
+  }
+  .bite::after {
+    width: 600px;
+    height: 539px;
+    left: 384px;
+    top: 92px;
+  }
+  .bite__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .bite__text {
+    width: 250px;
+  }
+  .bite__btn {
+    width: 258px;
+    padding: 5px 35px;
+  }
+  .recipes__wrapper-text {
+    margin-right: 5%;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  .recipes__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .recipes__dish {
+    padding-top: 25px;
+  }
+  .recipes__name {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1076,6 +1286,29 @@ img {
   }
   .soul .container {
     width: 500px;
+  }
+  .store .container {
+    padding-bottom: 170px;
+  }
+  .halva__promo {
+    margin-right: 20px;
+    padding: 70px 30px 50px 70px;
+  }
+  .halva__promo .halva__btn {
+    width: 235px;
+  }
+  .halva__gift {
+    max-width: 250px;
+  }
+  .halva__gift .halva__btn {
+    min-width: 200px;
+    padding: 16px 20px;
+  }
+  .halva__gift::before {
+    top: 57px;
+  }
+  .bite .container {
+    padding-bottom: 160px;
   }
 }
 
@@ -1250,6 +1483,103 @@ img {
   .soul__box::before {
     top: -114px;
   }
+  .store .container {
+    padding: 70px 70px 180px 40px;
+  }
+  .store__promo {
+    padding-top: 50px;
+  }
+  .store__title {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .store::before {
+    width: 120px;
+    height: 120px;
+  }
+  .store::after {
+    width: 550px;
+    height: 448px;
+    top: 75px;
+    left: 282px;
+  }
+  .halva .container {
+    flex-direction: column;
+  }
+  .halva__wrapper {
+    margin-right: 0;
+  }
+  .halva__wrapper::before {
+    position: absolute;
+    top: -14px;
+    right: -110px;
+  }
+  .halva__promo {
+    margin-right: 100px;
+    padding-left: 40px;
+  }
+  .halva__promo .halva__btn {
+    width: 255px;
+  }
+  .halva__title {
+    padding-bottom: 33px;
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .halva__title-text {
+    padding-bottom: 14px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .halva__gift {
+    margin-left: 26%;
+    max-width: fit-content;
+    padding: 254px 50px 55px;
+  }
+  .halva__gift::before {
+    width: 75px;
+    height: 167px;
+  }
+  .halva__gift-text {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .bite .container {
+    padding: 70px 70px 180px 40px;
+  }
+  .bite::before {
+    width: 120px;
+    height: 120px;
+  }
+  .bite::after {
+    width: 530px;
+    height: 476px;
+    left: 306px;
+    top: 58px;
+  }
+  .bite__promo {
+    padding-top: 50px;
+  }
+  .bite__title {
+    width: 287px;
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .recipes__wrapper-text {
+    margin-right: 0;
+    margin-left: 40px;
+    padding-bottom: 50px;
+    padding-right: 40px;
+    width: fit-content;
+  }
+  .recipes__title {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .recipes__name {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1271,6 +1601,15 @@ img {
   .promo-nut::after {
     width: 175px;
     height: 265px;
+  }
+  .halva__wrapper:before {
+    right: -125px;
+    top: 0;
+    width: 140px;
+    height: 229px;
+  }
+  .halva__title {
+    width: 100%;
   }
 }
 
@@ -1370,6 +1709,89 @@ img {
   }
   .soul .container {
     width: 280px;
+  }
+  .store .container {
+    padding: 70px 40px 100px 40px;
+  }
+  .store__title {
+    width: 150px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .store__text {
+    width: 200px;
+  }
+  .store__btn {
+    padding: 5px 45px;
+  }
+  .store::after {
+    left: 218px;
+    width: 490px;
+    height: 400px;
+  }
+  .store::before {
+    left: 154px;
+    top: 47px;
+    width: 100px;
+    height: 100px;
+  }
+  .halva__wrapper::before {
+    position: static;
+  }
+  .halva__promo {
+    margin-right: 5%;
+  }
+  .halva__promo .halva__btn {
+    width: 220px;
+  }
+  .halva__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .halva__title-text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .halva__gift {
+    margin-left: 15%;
+  }
+  .halva__gift-text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .bite .container {
+    padding: 75px 40px 140px 40px;
+  }
+  .bite__title {
+    width: 187px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .bite__text {
+    width: 200px;
+  }
+  .bite__btn {
+    width: 220px;
+  }
+  .bite::before {
+    left: 173px;
+    top: 47px;
+    width: 100px;
+    height: 100px;
+  }
+  .bite::after {
+    width: 450px;
+    height: 404px;
+    left: 239px;
+    top: 70px;
+  }
+  .recipes__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .recipes__name {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
